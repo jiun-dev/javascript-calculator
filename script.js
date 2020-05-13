@@ -68,6 +68,7 @@ divideButton.addEventListener("click", () => {
 
 clearButton.addEventListener("click", () => {
   numberInput.value = null;
+  resultInput.value = null;
   temp = null;
   operator = null;
 });
@@ -84,7 +85,7 @@ calculateButton.addEventListener("click", () => {
       } else if (operator === "/") {
         resultInput.value = temp / Number(numberInput.value);
       }
-      temp = resultInput.value;
+      temp = Number(resultInput.value);
     }
   } else {
     if (numberInput.value) {
